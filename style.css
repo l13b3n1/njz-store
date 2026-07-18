@@ -1,0 +1,145 @@
+.header {
+    padding-top: 30px;
+padding-left: 136px;
+padding-right: 136px;
+}
+.header__logo{
+    width: 140px;
+    height: auto;
+}
+body {
+    background-image: url(img/бернис\ блюренный.svg), url(img/Ellipse\ 1.svg);
+background-repeat: no-repeat, no-repeat;
+background-position: 450px top, 100px; 
+background-size:47%, 525px;
+background-position-y: top,340px;
+}
+.header__container {max-width: 1409px;
+margin-inline: auto;
+}
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__list {
+    display: flex;
+    gap: 0;
+}
+ul{list-style:none;}
+
+
+.header__list-link{
+font-family:"Montserrat";
+font-weight:400;
+color: black;
+transition: color 0.3s;
+padding-left: 13px;
+padding-right: 13px;
+}
+.header__list-link.active{
+    
+    border-right: 1px solid black;
+padding-right: 13px;
+}
+a{
+        text-decoration: none;
+    }
+.header__list-link:hover{
+    color: rgb(112, 170, 170);
+}
+.header__list-link.active:hover{
+    color: rgb(112, 170, 170);
+}
+.header__button {
+   background: none;
+   border: none;
+   padding: 0;
+   cursor: pointer;
+}
+.hero{
+    padding: 94px;
+}
+.hero__title{
+    padding-left: 30px;
+    max-width: 733px;
+    font-family:"Montserrat";
+    font-size: 24px;
+    color:black;
+    font-weight: 400;
+}
+.text-large {
+     font-family:"Montserrat";
+    font-size: 32px;
+    font-weight:500;
+   
+}
+ol {list-style:circle;}
+.hero__ol{
+     font-family:"Montserrat";
+       color: black;
+       max-width: 561px;
+       font-size: 20px;
+      
+}
+.hero__ol-li{
+    margin-top: 28px;
+    margin-bottom: 20px;
+}
+.hero__buttons{
+    display: flex;
+    max-width: 537px;
+    position:absolute;
+    left: 70px;
+}
+.hero__btn{
+    margin-top: 39px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+.hero__btn1{
+    margin-top: 47px;
+     background: none;
+    border: 0;
+    cursor: pointer;
+}
+.hero__binky-png {
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    pointer-events: none;
+}
+.hero__binky-ver {
+    font-family:"Montserrat";
+    font-weight: 400;
+    position: absolute;
+    top: 730px;
+    right: 350px;
+}
+.hero__slider{
+    display:flex;
+    align-items: center;
+    justify-content:right;
+    position: absolute;
+    right: 120px;
+    top: -50px;
+    gap: 150px;
+    position:relative;
+   
+    }
+    .arrow-btn {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .hero__binky-png {
+   
+    object-fit: contain; 
+    display: block;
+    margin: 0 auto;   
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out; 
+}

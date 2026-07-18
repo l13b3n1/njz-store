@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>njz store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicone.svg" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header class="header">
+    <div class="header__container">
+        <nav class="header__nav">
+            <img src="img/logo.svg" alt="лого" class="header__logo">
+            <ul class="header__list">
+                <li class="header__list-item">
+                    <a class="header__list-link active" href="https://shop.weverse.io/en/home">weverse shop</a>
+                </li>
+                <li>
+                    <a class="header__list-link active" href="https://adoraudition.world/">ADOR AUDITION</a>
+                </li>
+                <li>
+                    <a class="header__list-link" href="https://t.me/njzneverdieee">NJZ news</a>
+                </li>
+            </ul>
+            <button class="header__button">
+                <img src="img/меню.svg" 
+            </button>
+        </nav>
+    </div>
+   </header>
+   <main>
+    <section class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h2 class="hero__title">
+                        <span class="text-large">Binky Bong</span>
+                        - это официальный лайтстик южнокорейской музыкальной группы NewJeans. 
+                    </h2>
+                    <ol class="hero__ol">
+                            <li class="hero__ol-li">
+                                дизайн в форме кролика был вдохновлен фэндомом группы — «Tokki», что в переводе с корейского означает «кролик»
+                            </li>
+                            <li>
+                                имеет настраиваемый «jibbitz», который можно менять так часто, как вы хотите!
+                            </li>
+                        </ol>
+                     <div>
+                    <ul class="hero__buttons">
+                        <li>
+                            <button class="hero__btn">
+                            <img src="img/кнопка купить.svg">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="hero__btn1">
+                            <img src="img/кнопка join.svg"
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="hero__binky">
+                        <img id="hero__binky-png"  src="img/сам бинки пнг.png" class="hero__binky-png">
+                        <h2 id="hero__binky-ver" class="hero__binky-ver">
+                            NJ Ver.
+                        </h2>
+                    </div>
+                    <div class="hero__slider">
+                        <button id="prev-btn" class="arrow-btn">
+                            <img src="img/стрелка назад.svg">
+                        </button>
+                        <button id="next-btn" class="arrow-btn">
+                            <img src="img/стрелка вперед1.svg"
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+   </main>
+   </h1>
+   <script>
+                const items = [
+    { name: "NJ ver.", img: "img/сам бинки пнг.png" }, 
+    { name: "HN ver.", img: "img/ханни.svg" },   
+    { name: "DN ver.", img: "img/дани.svg" },      
+    { name: "MJ ver.", img: "img/минджи.svg" },
+    { name: "HY ver.", img: "img/хеин.svg" },
+    { name: "HR ver.", img: "img/хэрин.svg" }
+];
+
+let currentIndex = 0;
+
+const productImg = document.getElementById('hero__binky-png');
+const productTitle = document.getElementById('hero__binky-ver');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+function updateProduct(index) {
+     productImg.style.opacity = 0;
+       setTimeout(() => {
+        productImg.src = items[index].img;
+        productTitle.textContent = items[index].name;
+        productImg.style.opacity = 1;
+    }, 150); 
+}
+
+
+nextBtn.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= items.length) {
+        currentIndex = 0;
+    }
+    updateProduct(currentIndex);
+});
+
+prevBtn.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = items.length - 1;
+    }
+    updateProduct(currentIndex);
+});
+    </script>
+   
+</body>
+</html>
